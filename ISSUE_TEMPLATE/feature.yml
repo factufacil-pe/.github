@@ -1,0 +1,30 @@
+name: Feature
+description: HU que rastrea un documento de feature ODD. Enlaza, no copia.
+type: Feature
+body:
+  - type: input
+    id: change
+    attributes:
+      label: Change path
+      description: Ruta al documento de feature en el repo de documentación.
+      placeholder: doc/odd/tasks/<name>.md
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: Parent
+      description: Issue padre, si existe.
+      placeholder: <org>/<repo-docs>#12
+  - type: input
+    id: hu
+    attributes:
+      label: Specs
+      description: IDs S# de la sección Specs del documento.
+      placeholder: S1, S2
+  - type: input
+    id: tasks
+    attributes:
+      label: Tasks
+      description: IDs de la sección Tasks que cubre este issue.
+      placeholder: T2.1-T2.4
